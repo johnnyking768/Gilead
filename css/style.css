@@ -79,3 +79,34 @@
   .header-cta{padding-inline:11px;font-size:.78rem}
 }
 
+/* Hero video - paste at the very bottom of css/style.css */
+.hero-video {
+  width: 100%;
+  max-width: 320px;          /* vertical 9:16 ad video */
+  margin: 22px 0 26px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #14284B;
+  box-shadow: 0 14px 34px rgba(20, 40, 75, 0.25);
+  border: 3px solid #C8963E;
+}
+.hero-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 70vh;
+  object-fit: cover;
+  background: #14284B;
+}
+@media (max-width: 899px) {
+  .hero-video { margin-left: auto; margin-right: auto; }
+}
+/* Keep portrait framing on phones; use a wide player on desktop. */
+@media (min-width: 900px) {
+  .hero-video { max-width: 560px; }
+  .hero-video video {
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    object-fit: contain;
+  }
+}
